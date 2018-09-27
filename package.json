@@ -1,0 +1,37 @@
+{
+  "name": "find-hotel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "webpack-dev-server",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniorvanin/findHotels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juniorvanin/findHotels/issues"
+  },
+  "homepage": "https://github.com/juniorvanin/findHotels#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "eslint": "^5.6.0",
+    "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^4.0.0-alpha.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
