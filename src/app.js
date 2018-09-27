@@ -1,9 +1,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import SearchResults from "./searchResults/components/searchResults"
 
 class HelloMessage extends React.Component {
 	render() {
-		return <div>Welcome to simple react app</div>
+		return (
+			<div>
+				<p>Welcome to simple react app</p>
+				<SearchResults/>
+			</div>
+		)
 	}
 }
 
