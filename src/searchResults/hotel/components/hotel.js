@@ -16,48 +16,58 @@ const Hotel = () => (
 const HotelImage = () => <div className="thumbnail"></div>
 
 const GeneralDetails = () => {
+	const tags = ['Amazing SPA', 'Good food', 'Family friendly', 'Great location', 'Perfect WiFi']
+
 	return (
 		<div className="general-details">
 			<h2>Quentin Amsterdam Hotel</h2>
-			<RatingStars />
-			<Location />
-			<UsersRating />
-			<Tags />
+			<RatingStars numberOfStars="3" />
+			<Location message="120 m to city center - Jordan"/>
+			<UsersRating rate="9.2"/>
+			<Tags tags={tags}/>
 		</div>
 	)
 }
 
-const RatingStars = () => (
-	<div className="stars">
-		<FontAwesomeIcon icon={StarIcon} color="#FF7C44"/>
-		<FontAwesomeIcon icon={StarIcon} color="#FF7C44"/>
-		<FontAwesomeIcon icon={StarIcon} color="#FF7C44"/>
-		<FontAwesomeIcon icon={StarIcon} color="#e5e5e5"/>
-		<FontAwesomeIcon icon={StarIcon} color="#e5e5e5"/>
-	</div>
-)
+const ORANGE = "#FF7C44"
+const GRAY = "#e0dede"
+const getStarColorByRate = (index, numberOfStars) => numberOfStars >= index ? ORANGE : GRAY
+const RatingStars = (props) => {
+	const stars = []
 
-const Tags = () => (
+	for(let i = 1; i <= 5; i++) {
+		stars.push(<FontAwesomeIcon icon={StarIcon} color={ getStarColorByRate(i, props.numberOfStars) }/>)
+	}
+
+	return (
+		<div className="stars">
+			{ stars }
+		</div>
+	)
+}
+
+const Tags = (props) => (
 	<ul className="tags">
-		<li> Amazing SPA </li>
-		<li> Good food </li>
-		<li> Family friendly </li>
-		<li> Great location </li>
-		<li> Perfect WiFi </li>
+		{ props.tags.map((tag) => <li> { tag } </li>) }
 	</ul>
 )
 
-const Location = () => (
+const BLUE = "#0098E8"
+const Location = (props) => (
 	<div className="location">
-		<FontAwesomeIcon icon={LocationArrowIcon} color="#0098E8"/>
-		<span> 120 m to city center - Jordan </span>
+		<FontAwesomeIcon icon={LocationArrowIcon} color={BLUE}/>
+		<span> { props.message } </span>
 	</div>
 )
 
-const UsersRating = () => (
+const GREEN = "#82BB7F"
+const YELLOW = "#FBD797"
+const getColorByRate = (rate) => rate >= 9 ? GREEN : YELLOW
+const getMessageByRate = (rate) => `Amazing ${rate}`
+const UsersRating = (props) => (
 	<div className="rating">
-		<FontAwesomeIcon icon={SmileIcon} color="#82BB7F"/>
-		<span> Amazing 9.2 </span>
+		<FontAwesomeIcon icon={SmileIcon} color={getColorByRate(props.rate)}/>
+		<span> { getMessageByRate(props.rate) } </span>
 	</div>
 )
 
