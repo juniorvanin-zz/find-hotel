@@ -2,7 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar as StarIcon, faSmile as SmileIcon } from "@fortawesome/free-regular-svg-icons"
 import { faLocationArrow as LocationArrowIcon } from "@fortawesome/free-solid-svg-icons"
-import "../hotel.css"
+import "searchResults/hotel/hotel.css"
 
 class Hotel extends React.Component {
 	render() {

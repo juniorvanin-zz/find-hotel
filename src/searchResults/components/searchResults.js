@@ -1,6 +1,6 @@
 import React from "react"
-import Hotel from "../hotel/components/hotel"
-import "./../searchResults.css"
+import Hotel from "searchResults/hotel/components/hotel"
+import "searchResults/searchResults.css"
 
 class SearchResults extends React.Component {
 	render() {

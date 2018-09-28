@@ -8,6 +8,12 @@ const config = {
 		path: path.resolve(__dirname, "dist"),
 		filename: "bundle.js"
 	},
+	resolve: {
+  modules: [
+	    path.resolve('./src'),
+	    path.resolve('./node_modules')
+	  ]
+	},
 	mode: "development",
 	module: {
 		rules: [

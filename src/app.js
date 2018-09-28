@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import SearchResults from "./searchResults/components/searchResults"
-import "./app.css"
+import SearchResults from "searchResults/components/searchResults"
+import "app.css"
 
 class HelloMessage extends React.Component {
 	render() {
