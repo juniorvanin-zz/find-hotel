@@ -1,5 +1,5 @@
 import React from "react"
-import Item from "../item/components/item"
+import Hotel from "../hotel/components/hotel"
 import "./../searchResults.css"
 
 class SearchResults extends React.Component {
@@ -7,13 +7,13 @@ class SearchResults extends React.Component {
 		return (
 			<ul>
 				<li>
-					<Item />
+					<Hotel />
 				</li>
 				<li>
-					<Item />
+					<Hotel />
 				</li>
 				<li>
-					<Item />
+					<Hotel />
 				</li>
 			</ul>
 		)

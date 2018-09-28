@@ -2,9 +2,9 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar as StarIcon, faSmile as SmileIcon } from "@fortawesome/free-regular-svg-icons"
 import { faLocationArrow as LocationArrowIcon } from "@fortawesome/free-solid-svg-icons"
-import "../item.css"
+import "../hotel.css"
 
-class Item extends React.Component {
+class Hotel extends React.Component {
 	render() {
 		return (
 			<div className="item-wrapper">
@@ -42,4 +42,4 @@ class Item extends React.Component {
 	}
 }
 
-export default Item
+export default Hotel
