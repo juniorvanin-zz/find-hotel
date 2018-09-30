@@ -6,6 +6,8 @@ import Location from "./../location/components/location"
 import Tags from "./../tags/components/tags"
 import UsersRating from "./../usersRating/components/usersRating"
 
+import "searchResults/hotel/generalDetails/generalDetails.css"
+
 const GeneralDetails = (props) => (
 	<div className="general-details">
 		<h2>{ props.title }</h2>

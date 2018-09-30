@@ -12,7 +12,7 @@ const RatingStars = (props) => {
 	const stars = []
 
 	for(let i = 1; i <= 5; i++) {
-		stars.push(<FontAwesomeIcon icon={StarIcon} color={ getStarColorByRate(i, props.numberOfStars) }/>)
+		stars.push(<FontAwesomeIcon  key={i} icon={StarIcon} color={ getStarColorByRate(i, props.numberOfStars) }/>)
 	}
 
 	return (

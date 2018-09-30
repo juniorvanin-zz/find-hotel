@@ -16,13 +16,7 @@ const Hotel = (props) => (
 )
 
 Hotel.propTypes = {
-	generalDetails: {
-		title: PropTypes.string,
-		numberOfStars: PropTypes.number,
-		locationMessage: PropTypes.string,
-		usersRating: PropTypes.number,
-		tags: PropTypes.array
-	}
+	generalDetails: PropTypes.object
 }
 
 export default Hotel
