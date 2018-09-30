@@ -8,15 +8,19 @@ import UsersRating from "./../usersRating/components/usersRating"
 
 const GeneralDetails = (props) => (
 	<div className="general-details">
-		<h2>Quentin Amsterdam Hotel</h2>
-		<RatingStars numberOfStars="3" />
-		<Location message="120 m to city center - Jordan"/>
-		<UsersRating rate="9.2"/>
+		<h2>{ props.title }</h2>
+		<RatingStars numberOfStars={ props.numberOfStars } />
+		<Location message={ props.locationMessage }/>
+		<UsersRating rate={ props.usersRating }/>
 		<Tags tags={props.tags}/>
 	</div>
 )
 
 GeneralDetails.propTypes = {
+	title: PropTypes.string,
+	numberOfStars: PropTypes.number,
+	locationMessage: PropTypes.string,
+	usersRating: PropTypes.number,
 	tags: PropTypes.array
 }
 

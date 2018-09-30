@@ -10,13 +10,19 @@ import "searchResults/hotel/hotel.css"
 const Hotel = (props) => (
 	<div className="item-wrapper">
 		<HotelThumbnail />
-		<GeneralDetails tags={props.tags}/>
+		<GeneralDetails {...props.generalDetails}/>
 		<PriceDetails />
 	</div>
 )
 
 Hotel.propTypes = {
-	tags: PropTypes.array
+	generalDetails: {
+		title: PropTypes.string,
+		numberOfStars: PropTypes.number,
+		locationMessage: PropTypes.string,
+		usersRating: PropTypes.number,
+		tags: PropTypes.array
+	}
 }
 
 export default Hotel
