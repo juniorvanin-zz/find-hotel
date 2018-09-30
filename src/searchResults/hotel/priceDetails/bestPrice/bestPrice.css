@@ -1,0 +1,26 @@
+.best-price {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.best-price-message {
+  color: #4D8E20;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.go-to-offer-btn {
+  background-color: #FF4B00;
+  border-radius: 15px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  width: 90%;
+  color: white;
+  font-weight: bold;
+  border: 0;
+}
+
+.go-to-offer-btn span {
+  margin-right: 5px;
+}
