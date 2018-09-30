@@ -14,5 +14,4 @@ class HelloMessage extends React.Component {
 	}
 }
 
-var mountNode = document.getElementById("app")
-ReactDOM.render(<HelloMessage />, mountNode)
+ReactDOM.render(<HelloMessage />, document.getElementById("root"))
