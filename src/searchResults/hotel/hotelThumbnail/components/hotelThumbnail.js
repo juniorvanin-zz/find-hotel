@@ -1,5 +1,15 @@
 import React from "react"
 
-const HotelThumbnail = () => <div className="thumbnail"></div>
+import "searchResults/hotel/hotelThumbnail/hotelThumbnail.css"
+
+const HotelThumbnail = () => {
+	return(
+		<div className="thumbnail">
+			<div className="behind-image-arrow"></div>
+			<span className="great-offer"> GREAT OFFER </span>
+			<div className="arrow-right"> </div>
+		</div>
+	)
+}
 
 export default HotelThumbnail

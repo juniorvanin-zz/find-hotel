@@ -106,7 +106,7 @@ class SearchResults extends React.Component {
 		]
 
 		return (
-			<ul>
+			<ul className="search-results">
 				{
 					hotels.map((hotel) => (
 						<Hotel

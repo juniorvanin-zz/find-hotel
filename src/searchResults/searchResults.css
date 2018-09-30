@@ -4,6 +4,6 @@ ul {
   padding: 0;
 }
 
-#searchResults {
-margin-top: 50px; 
+.search-results {
+  margin: 10px;
 }

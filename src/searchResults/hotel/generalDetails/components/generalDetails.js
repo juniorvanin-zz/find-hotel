@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import RatingStars from "./../ratingStars/components/ratingStars"
-import Location from "./../location/components/location"
-import Tags from "./../tags/components/tags"
-import UsersRating from "./../usersRating/components/usersRating"
+import RatingStars from "searchResults/hotel/generalDetails/ratingStars/components/ratingStars"
+import Location from "searchResults/hotel/generalDetails/location/components/location"
+import Tags from "searchResults/hotel/generalDetails/tags/components/tags"
+import UsersRating from "searchResults/hotel/generalDetails/usersRating/components/usersRating"
 
 import "searchResults/hotel/generalDetails/generalDetails.css"
 
