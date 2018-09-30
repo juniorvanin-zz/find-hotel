@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
 	faLongArrowAltRight as ArrowRightIcon,
@@ -7,28 +8,26 @@ import {
 
 import "searchResults/hotel/PriceDetails/PriceDetails.css"
 
-const PriceDetails = () => (
+const PriceDetails = (props) => (
 	<div className="price-details">
-		<del className="regular-price"> € 115 </del>
-		<span className="best-price"> € 104 </span>
-		<span className="best-price-message"> Free cancellation</span>
+		<del className="regular-price"> { props.regularPrice } </del>
+		<span className="best-price"> { props.bestPrice.amount } </span>
+		<span className="best-price-message">
+			{ props.bestPrice.freeCancellation ? "Free cancellation" : "" }
+		</span>
 		<button className="go-to-offer-btn">
-			<span>Booking.com</span>
+			<span>{ props.bestPrice.link }</span>
 			<FontAwesomeIcon icon={ArrowRightIcon} color="white"/>
 		</button>
 		<ul className="other-prices">
-			<li>
-				<span className="site">priceline.com</span>
-				<span className="price"> €115 </span>
-			</li>
-			<li>
-				<span className="site">expedia.com</span>
-				<span className="price"> €132 </span>
-			</li>
-			<li>
-				<span className="site">7ideas.com</span>
-				<span className="price"> €129 </span>
-			</li>
+			{
+				props.otherPrices.map((price) => (
+					<li key={ price.site }>
+						<span className="site"> { price.site } </span>
+						<span className="price"> { price.amount } </span>
+					</li>
+				))
+			}
 		</ul>
 		<button className="show-details">
 			<span> Show details </span>
@@ -36,5 +35,11 @@ const PriceDetails = () => (
 		</button>
 	</div>
 )
+
+PriceDetails.propTypes = {
+	regularPrice: PropTypes.string,
+	bestPrice: PropTypes.object,
+	otherPrices: PropTypes.array
+}
 
 export default PriceDetails

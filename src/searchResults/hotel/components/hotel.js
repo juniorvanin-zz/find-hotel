@@ -8,15 +8,16 @@ import HotelThumbnail from "searchResults/hotel/hotelThumbnail/components/hotelT
 import "searchResults/hotel/hotel.css"
 
 const Hotel = (props) => (
-	<div className="item-wrapper">
+	<li className="item-wrapper">
 		<HotelThumbnail />
-		<GeneralDetails {...props.generalDetails}/>
-		<PriceDetails />
-	</div>
+		<GeneralDetails { ...props.generalDetails }/>
+		<PriceDetails { ...props.priceDetails }/>
+	</li>
 )
 
 Hotel.propTypes = {
-	generalDetails: PropTypes.object
+	generalDetails: PropTypes.object,
+	priceDetails: PropTypes.object
 }
 
 export default Hotel
