@@ -9,6 +9,7 @@ class SearchResults extends React.Component {
 		const hotels = [
 			{
 				id: "24556",
+				thumbnail: "https://r-ec.bstatic.com/images/hotel/max1280x900/951/95186890.jpg",
 				generalDetails: {
 					title: "Quentin Amsterdam Hotel",
 					numberOfStars: 3,
@@ -41,6 +42,7 @@ class SearchResults extends React.Component {
 			},
 			{
 				id: "23324",
+				thumbnail: "https://q-ec.bstatic.com/images/hotel/max1280x900/216/21656450.jpg",
 				generalDetails: {
 					title: "Hotel Torenzicht",
 					numberOfStars: 5,
@@ -73,6 +75,7 @@ class SearchResults extends React.Component {
 			},
 			{
 				id: "23426",
+				thumbnail: "https://r-ec.bstatic.com/images/hotel/max1280x900/219/21918566.jpg",
 				generalDetails: {
 					title: "Doubletree by Hilton Hotel Amsterdam Central Station",
 					numberOfStars: 4,
@@ -111,6 +114,7 @@ class SearchResults extends React.Component {
 					hotels.map((hotel) => (
 						<Hotel
 							key={ hotel.id }
+							thumbnail={ hotel.thumbnail }
 							generalDetails={ hotel.generalDetails }
 							priceDetails={ hotel.priceDetails }
 						/>
