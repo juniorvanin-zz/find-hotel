@@ -1,17 +1,18 @@
-import React from "react"
+import React,  { Fragment } from "react"
 import ReactDOM from "react-dom"
+
 import SearchResults from "searchResults/components/searchResults"
-import "app.css"
+import Header from "header/components/header"
 
-class HelloMessage extends React.Component {
-	render() {
-		return (
-			<div>
-				<p>Welcome to simple react app</p>
-				<SearchResults/>
-			</div>
-		)
-	}
-}
+import "index.css"
 
-ReactDOM.render(<HelloMessage />, document.getElementById("root"))
+const FindHotelPage = () => (
+	<Fragment>
+		<Header />
+		<main>
+			<SearchResults/>
+		</main>
+	</Fragment>
+)
+
+ReactDOM.render(<FindHotelPage />, document.getElementById("root"))

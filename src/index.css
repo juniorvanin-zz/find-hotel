@@ -1,0 +1,25 @@
+body {
+  background-color: #F0F0F0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+
+header {
+  background-color: #0092E5;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 15px;
+  font-size: 14px;
+  color: white;
+  font-weight: 100;
+}
+
+main {
+  margin-top: 100px;
+}
