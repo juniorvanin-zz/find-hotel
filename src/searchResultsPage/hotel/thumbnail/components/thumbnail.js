@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import "searchResults/hotel/thumbnail/thumbnail.css"
+import "searchResultsPage/hotel/thumbnail/thumbnail.css"
 
 const Thumbnail = (props) => {
 	return(

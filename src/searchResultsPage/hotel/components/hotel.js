@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import GeneralDetails from "searchResults/hotel/generalDetails/components/generalDetails"
-import PriceDetails from "searchResults/hotel/priceDetails/components/priceDetails"
-import Thumbnail from "searchResults/hotel/thumbnail/components/thumbnail"
+import GeneralDetails from "searchResultsPage/hotel/generalDetails/components/generalDetails"
+import PriceDetails from "searchResultsPage/hotel/priceDetails/components/priceDetails"
+import Thumbnail from "searchResultsPage/hotel/thumbnail/components/thumbnail"
 
-import "searchResults/hotel/hotel.css"
+import "searchResultsPage/hotel/hotel.css"
 
 const Hotel = (props) => (
 	<li className="item-wrapper">

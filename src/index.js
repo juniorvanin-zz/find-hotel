@@ -1,7 +1,7 @@
 import React,  { Fragment } from "react"
 import ReactDOM from "react-dom"
 
-import SearchResults from "searchResults/components/searchResults"
+import SearchResultsPage from "searchResultsPage/components/searchResultsPage"
 import Header from "header/components/header"
 import Filters from "filters/components/filters"
 
@@ -27,7 +27,7 @@ const FindHotelPage = () => {
 			<Header />
 			<main>
 				<Filters sortByInfo={sortByInfo} />
-				<SearchResults />
+				<SearchResultsPage />
 			</main>
 		</Fragment>
 	)

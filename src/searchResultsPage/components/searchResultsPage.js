@@ -1,10 +1,10 @@
 import React from "react"
 
-import Hotel from "searchResults/hotel/components/hotel"
+import Hotel from "searchResultsPage/hotel/components/hotel"
 
-import "searchResults/searchResults.css"
+import "searchResultsPage/searchResultsPage.css"
 
-class SearchResults extends React.Component {
+class SearchResultsPage extends React.Component {
 	render() {
 		const hotels = [
 			{
@@ -125,4 +125,4 @@ class SearchResults extends React.Component {
 	}
 }
 
-export default SearchResults
+export default SearchResultsPage

@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import RatingStars from "searchResults/hotel/generalDetails/ratingStars/components/ratingStars"
-import Location from "searchResults/hotel/generalDetails/location/components/location"
-import Tags from "searchResults/hotel/generalDetails/tags/components/tags"
-import UsersRating from "searchResults/hotel/generalDetails/usersRating/components/usersRating"
+import RatingStars from "searchResultsPage/hotel/generalDetails/ratingStars/components/ratingStars"
+import Location from "searchResultsPage/hotel/generalDetails/location/components/location"
+import Tags from "searchResultsPage/hotel/generalDetails/tags/components/tags"
+import UsersRating from "searchResultsPage/hotel/generalDetails/usersRating/components/usersRating"
 
-import "searchResults/hotel/generalDetails/generalDetails.css"
+import "searchResultsPage/hotel/generalDetails/generalDetails.css"
 
 const GeneralDetails = (props) => (
 	<div className="general-details">
