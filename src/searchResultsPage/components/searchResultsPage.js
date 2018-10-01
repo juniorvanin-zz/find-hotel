@@ -1,6 +1,7 @@
 import React from "react"
 
 import Hotel from "searchResultsPage/hotel/components/hotel"
+import Filters from "searchResultsPage/filters/components/filters"
 
 import "searchResultsPage/searchResultsPage.css"
 
@@ -108,19 +109,37 @@ class SearchResultsPage extends React.Component {
 			}
 		]
 
-		return (
-			<ul className="search-results">
+		const sortByInfo = {
+			numberOfHotels: 2380,
+			numberOfGreatDeals: 56,
+			sortByOptions: [
 				{
-					hotels.map((hotel) => (
-						<Hotel
-							key={ hotel.id }
-							thumbnail={ hotel.thumbnail }
-							generalDetails={ hotel.generalDetails }
-							priceDetails={ hotel.priceDetails }
-						/>
-					))
+					key: "best-suplier",
+					value: "Best supplier & price"
+				},
+				{
+					key: "best-location",
+					value: "Best location"
 				}
-			</ul>
+			]
+		}
+
+		return (
+			<main>
+				<Filters sortByInfo={sortByInfo} />
+				<ul className="search-results">
+					{
+						hotels.map((hotel) => (
+							<Hotel
+								key={ hotel.id }
+								thumbnail={ hotel.thumbnail }
+								generalDetails={ hotel.generalDetails }
+								priceDetails={ hotel.priceDetails }
+							/>
+						))
+					}
+				</ul>
+			</main>
 		)
 	}
 }
