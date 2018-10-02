@@ -6,7 +6,7 @@ import Location from "searchResultsPage/hotel/generalDetails/location/components
 import Tags from "searchResultsPage/hotel/generalDetails/tags/components/tags"
 import UsersRating from "searchResultsPage/hotel/generalDetails/usersRating/components/usersRating"
 
-import "searchResultsPage/hotel/generalDetails/generalDetails.css"
+import "searchResultsPage/hotel/generalDetails/generalDetails.less"
 
 const GeneralDetails = (props) => (
 	<div className="general-details">

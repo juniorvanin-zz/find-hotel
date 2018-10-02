@@ -5,7 +5,7 @@ import BestPrice from "searchResultsPage/hotel/PriceDetails/bestPrice/components
 import OtherPrices from "searchResultsPage/hotel/PriceDetails/otherPrices/components/otherPrices"
 import ShowDetailsButton from "searchResultsPage/hotel/PriceDetails/showDetailsButton/components/showDetailsButton"
 
-import "searchResultsPage/hotel/PriceDetails/PriceDetails.css"
+import "searchResultsPage/hotel/PriceDetails/PriceDetails.less"
 
 const PriceDetails = (props) => (
 	<div className="price-details">

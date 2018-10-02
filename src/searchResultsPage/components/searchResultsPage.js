@@ -3,7 +3,7 @@ import React from "react"
 import Hotel from "searchResultsPage/hotel/components/hotel"
 import Filters from "searchResultsPage/filters/components/filters"
 
-import "searchResultsPage/searchResultsPage.css"
+import "searchResultsPage/searchResultsPage.less"
 
 const hotels = [
 	{

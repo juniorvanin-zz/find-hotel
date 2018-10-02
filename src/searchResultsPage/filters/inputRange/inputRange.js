@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import ReactInputRange from "react-input-range"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import "searchResultsPage/filters/inputRange/inputRange.css"
+import "searchResultsPage/filters/inputRange/inputRange.less"
 
 class InputRange extends React.Component {
 	constructor(props) {

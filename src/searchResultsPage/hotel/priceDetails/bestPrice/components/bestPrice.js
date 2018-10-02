@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { 	faLongArrowAltRight as ArrowRightIcon } from "@fortawesome/free-solid-svg-icons"
 
-import "searchResultsPage/hotel/priceDetails/bestPrice/bestPrice.css"
+import "searchResultsPage/hotel/priceDetails/bestPrice/bestPrice.less"
 
 const BestPrice = (props) => (
 	<Fragment>

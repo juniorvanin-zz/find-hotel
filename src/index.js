@@ -4,7 +4,7 @@ import ReactDOM from "react-dom"
 import Header from "header/components/header"
 import SearchResultsPage from "searchResultsPage/components/searchResultsPage"
 
-import "index.css"
+import "index.less"
 
 const FindHotelPage = () => (
 	<Fragment>

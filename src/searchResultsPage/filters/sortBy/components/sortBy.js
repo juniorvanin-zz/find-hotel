@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import "searchResultsPage/filters/sortBy/sortBy.css"
+import "searchResultsPage/filters/sortBy/sortBy.less"
 
 const SortBy = (props) => (
 	<div className="sort-by-wrapper">
