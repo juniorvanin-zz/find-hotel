@@ -123,9 +123,9 @@ const sortByInfo = {
 }
 
 const filtersOptions ={
-	priceRange: { min: 0, max: 1000 },
-	ratingRange: { min: 0, max: 10 },
-	distanceRange: { min: 0, max: 100 }
+	priceRange: { min: 0, max: 850, selectedValue: 600 },
+	ratingRange: { min: 1, max: 10, selectedValue: 1 },
+	distanceRange: { min: 0, max: 30, selectedValue: 5 }
 }
 
 const SearchResultsPage = () => (

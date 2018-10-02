@@ -8,6 +8,7 @@ const DistanceInput = (props) => (
 		icon={LocationArrowIcon}
 		label="Distance from city center"
 		type="km"
+		selectedValue={ props.selectedValue }
 		minValue={ props.minValue }
 		maxValue={ props.maxValue }
 	/>
@@ -15,7 +16,8 @@ const DistanceInput = (props) => (
 
 DistanceInput.propTypes = {
 	minValue: PropTypes.number,
-	maxValue: PropTypes.number
+	maxValue: PropTypes.number,
+	selectedValue: PropTypes.number
 }
 
 export default DistanceInput

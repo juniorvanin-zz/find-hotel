@@ -8,6 +8,7 @@ const MinRatingInput = (props) => (
 		icon={SmileIcon}
 		label="Min rating"
 		type="number"
+		selectedValue={ props.selectedValue }
 		minValue={ props.minValue }
 		maxValue={ props.maxValue }
 	/>
@@ -15,7 +16,8 @@ const MinRatingInput = (props) => (
 
 MinRatingInput.propTypes = {
 	minValue: PropTypes.number,
-	maxValue: PropTypes.number
+	maxValue: PropTypes.number,
+	selectedValue: PropTypes.number
 }
 
 export default MinRatingInput

@@ -8,6 +8,7 @@ const MaxPriceInput = (props) => (
 		icon={EuroIcon}
 		label="Max price"
 		type="money"
+		selectedValue={ props.selectedValue }
 		minValue={ props.minValue }
 		maxValue={ props.maxValue }
 	/>
@@ -15,7 +16,8 @@ const MaxPriceInput = (props) => (
 
 MaxPriceInput.propTypes = {
 	minValue: PropTypes.number,
-	maxValue: PropTypes.number
+	maxValue: PropTypes.number,
+	selectedValue: PropTypes.number
 }
 
 export default MaxPriceInput

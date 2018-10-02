@@ -10,7 +10,7 @@ class InputRange extends React.Component {
 		super(props)
 
 		this.state = {
-			value: 0,
+			value: props.selectedValue,
 		}
 	}
 
@@ -48,6 +48,7 @@ class InputRange extends React.Component {
 InputRange.propTypes = {
 	icon: PropTypes.object,
 	label: PropTypes.string,
+	selectedValue: PropTypes.number,
 	minValue: PropTypes.number,
 	maxValue: PropTypes.number,
 	type: PropTypes.string
