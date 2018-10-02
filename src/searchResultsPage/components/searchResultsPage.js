@@ -122,9 +122,15 @@ const sortByInfo = {
 	]
 }
 
+const filtersOptions ={
+	priceRange: { min: 0, max: 1000 },
+	ratingRange: { min: 0, max: 10 },
+	distanceRange: { min: 0, max: 100 }
+}
+
 const SearchResultsPage = () => (
 	<main>
-		<Filters sortByInfo={sortByInfo} />
+		<Filters options={ filtersOptions } sortByInfo={ sortByInfo } />
 		<ul className="search-results">
 			{
 				hotels.map((hotel) => (

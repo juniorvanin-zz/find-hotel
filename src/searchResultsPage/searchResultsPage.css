@@ -4,6 +4,18 @@ ul {
   padding: 0;
 }
 
+.input-range-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-range-wrapper {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
 .search-results {
   margin: 10px;
 }
