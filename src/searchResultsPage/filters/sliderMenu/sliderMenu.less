@@ -1,0 +1,45 @@
+.slider-filter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform .3s cubic-bezier(0, .52, 0, 1);
+    width: 100vw;
+    height: 100vmax;
+    background-color: white;
+    z-index: 9999;
+}
+
+
+.slider-filter.hide {
+  transform: translate3d(-100vw, 0, 0);
+}
+
+.slider-filter.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+
+
+.slider-filter-header {
+  background-color: #0092E5;
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+}
+.closeButton {
+  padding: 18px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 0;
+}
+
+.closeButton span {
+  color: white;
+  margin-left: 10px;
+}
+
+.closeButton:focus {
+  outline: none;
+}

@@ -8,66 +8,87 @@ import DistanceInput from "searchResultsPage/filters/distanceInput/components/di
 import MinRatingInput from "searchResultsPage/filters/minRatingInput/components/minRatingInput"
 import MaxPriceInput from "searchResultsPage/filters/maxPriceInput/components/maxPriceInput"
 import SortBy from "searchResultsPage/filters/sortBy/components/sortBy"
+import SliderMenu from "searchResultsPage/filters/sliderMenu/components/sliderMenu"
 
 const BLUE = "#0092e5"
 
 class Filters extends React.Component {
 	constructor(props) {
 		super(props)
+
+		this.state = {
+			sliderFilterVisibility: false
+		}
+	}
+
+	toggleSliderMenu() {
+		this.setState (
+			{
+				sliderMenuVisibility: !this.state.sliderMenuVisibility
+			}
+		)
 	}
 
 	render() {
-		const options = this.props.options
+		const { priceRange, ratingRange, distanceRange } = this.props.options
 		return (
 			<Fragment>
 				<MediaQuery minWidth={800}>
 					<div className="input-range-group">
 						<div className="input-range-wrapper">
 							<MaxPriceInput
-								minValue={ options.priceRange.min }
-								maxValue={ options.priceRange.max }
-								selectedValue={ options.priceRange.selectedValue }
+								minValue={ priceRange.min }
+								maxValue={ priceRange.max }
+								selectedValue={ priceRange.selectedValue }
 							/>
 						</div>
 						<div className="input-range-wrapper">
 							<MinRatingInput
-								minValue={ options.ratingRange.min }
-								maxValue={ options.ratingRange.max }
-								selectedValue={ options.ratingRange.selectedValue }
+								minValue={ ratingRange.min }
+								maxValue={ ratingRange.max }
+								selectedValue={ ratingRange.selectedValue }
 							/>
 						</div>
 						<div className="input-range-wrapper">
 							<DistanceInput
-								minValue={ options.distanceRange.min }
-								maxValue={ options.distanceRange.max }
-								selectedValue={ options.distanceRange.selectedValue }
+								minValue={ distanceRange.min }
+								maxValue={ distanceRange.max }
+								selectedValue={ distanceRange.selectedValue }
 							/>
 						</div>
 					</div>
 					<SortBy { ...this.props.sortByInfo } />
 				</MediaQuery>
 				<MediaQuery maxWidth={800}>
-					<SortByMobileButton />
-					<FilterByMobileButton />
+					<SliderMenu
+						visibility={ this.state.sliderMenuVisibility }
+						toggleSliderMenu={ () => this.toggleSliderMenu() }
+					/>
+					<SortByButton />
+					<FilterByButton toggleSliderMenu={ () => this.toggleSliderMenu() }/>
 				</MediaQuery>
 			</Fragment>
 		)
 	}
 }
 
-const SortByMobileButton = () => (
-	<button className="mobile-filter-button">
+const SortByButton = () => (
+	<button className="mobile-button">
 		<FontAwesomeIcon icon={ SortIcon } color={BLUE} />
 		<span> Sort by </span>
 	</button>
 )
 
-const FilterByMobileButton = () => (
-	<button className="mobile-filter-button">
+const FilterByButton = (props) => (
+	<button className="mobile-button" onClick={ () => props.toggleSliderMenu() }>
 		<FontAwesomeIcon icon={ FilterIcon } color={BLUE} />
 		<span> Filter by </span>
 	</button>
 )
+
+FilterByButton.propTypes = {
+	toggleSliderMenu: PropTypes.func
+}
 
 Filters.propTypes = {
 	sortByInfo: PropTypes.object,
