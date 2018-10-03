@@ -7,6 +7,10 @@ ul {
 .input-range-group {
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 835px) {
+    justify-content: space-between;
+  }
 }
 
 .input-range-wrapper {
@@ -18,4 +22,22 @@ ul {
 
 .search-results {
   margin: 15px;
+
+  @media (max-width: 835px) {
+    min-width: 360px;
+  }
+}
+
+.mobile-filter-button {
+  padding: 10px 15px;
+  background-color: #F8F8F8;
+  margin-left: 15px;
+  border: 0;
+}
+
+.mobile-filter-button span {
+  color: #0092e5;
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: bold;
 }

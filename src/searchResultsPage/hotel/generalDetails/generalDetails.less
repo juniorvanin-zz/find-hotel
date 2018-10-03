@@ -1,9 +1,16 @@
 .general-details {
   width: 100%;
+  min-height: 235px;
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #F0F0F0;
+
+  @media (max-width: 835px) {
+    border-bottom: 1px solid #F0F0F0;
+    border-right: 0;
+    min-height: auto;
+  }
 }
 
 h2 {
@@ -34,7 +41,6 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 15px;
 }
 
 .tags li {
@@ -42,5 +48,5 @@ h2 {
   border-radius: 15px;
   padding: 8px;
   margin: 2px;
-  font-size: 11px;
+  font-size: 10px;
 }
