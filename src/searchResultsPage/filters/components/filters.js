@@ -9,6 +9,7 @@ import MinRatingInput from "searchResultsPage/filters/minRatingInput/components/
 import MaxPriceInput from "searchResultsPage/filters/maxPriceInput/components/maxPriceInput"
 import SortBy from "searchResultsPage/filters/sortBy/components/sortBy"
 import SliderMenu from "searchResultsPage/filters/sliderMenu/components/sliderMenu"
+import MobileFilters from "searchResultsPage/filters/sliderMenu/filters/components/filters"
 
 const BLUE = "#0092e5"
 
@@ -33,7 +34,7 @@ class Filters extends React.Component {
 		const { priceRange, ratingRange, distanceRange } = this.props.options
 		return (
 			<Fragment>
-				<MediaQuery minWidth={800}>
+				<MediaQuery minWidth={836}>
 					<div className="input-range-group">
 						<div className="input-range-wrapper">
 							<MaxPriceInput
@@ -59,11 +60,10 @@ class Filters extends React.Component {
 					</div>
 					<SortBy { ...this.props.sortByInfo } />
 				</MediaQuery>
-				<MediaQuery maxWidth={800}>
-					<SliderMenu
-						visibility={ this.state.sliderMenuVisibility }
-						toggleSliderMenu={ () => this.toggleSliderMenu() }
-					/>
+				<MediaQuery maxWidth={835}>
+					<SliderMenu title="Filter" visibility={ this.state.sliderMenuVisibility } toggleSliderMenu={ () => this.toggleSliderMenu() }>
+						<MobileFilters />
+					</SliderMenu>
 					<SortByButton />
 					<FilterByButton toggleSliderMenu={ () => this.toggleSliderMenu() }/>
 				</MediaQuery>

@@ -1,26 +1,26 @@
-.slider-filter {
+.slider-menu {
     position: absolute;
     left: 0;
     top: 0;
     transition: transform .3s cubic-bezier(0, .52, 0, 1);
-    width: 100vw;
-    height: 100vmax;
+    width: 100%;
+    height: 100%;
     background-color: white;
     z-index: 9999;
 }
 
 
-.slider-filter.hide {
+.slider-menu.hide {
   transform: translate3d(-100vw, 0, 0);
 }
 
-.slider-filter.show {
+.slider-menu.show {
   transform: translate3d(0vw, 0, 0);
   overflow: hidden;
 }
 
 
-.slider-filter-header {
+.slider-menu-header {
   background-color: #0092E5;
   position: relative;
   width: 100%;
@@ -28,18 +28,64 @@
   top: 0;
 
 }
-.closeButton {
+.close-button {
   padding: 18px;
   font-size: 18px;
   background-color: transparent;
   border: 0;
 }
 
-.closeButton span {
+.close-button span {
   color: white;
   margin-left: 10px;
 }
 
-.closeButton:focus {
+.close-button:focus {
   outline: none;
+}
+
+.filters {
+  padding-top: 90px;
+
+  .filter-group {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  span {
+    margin-left: 15px;
+  }
+
+  .selected {
+    border: 0;
+    color: white;
+  }
+
+  .stars {
+    .selected {
+      background-color: #F1BE02;
+    }
+  }
+
+  .rating {
+    .selected {
+      background-color: #2D8BEB;
+    }
+  }
+
+  button {
+    padding: 15px 0;
+    width: 17%;
+    font-size: 14px;
+    border: 1px solid #9F9F9F;
+    background-color: white;
+    color: #9F9F9F;
+
+    span {
+      margin-right: 5px;
+    }
+  }
 }
